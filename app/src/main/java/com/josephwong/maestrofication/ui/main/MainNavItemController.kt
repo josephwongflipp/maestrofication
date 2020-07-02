@@ -13,14 +13,6 @@ class MainNavItemController(val listener: MainFragment.NavigationOnClickListener
     override fun buildModels() {
         MainNavigationModel_()
             .id(0)
-            .title("Simple Example with one view holder")
-            .clickListener { _ ->
-                listener.onSimpleExampleClicked()
-            }
-            .addTo(this)
-
-        MainNavigationModel_()
-            .id(0)
             .title("Carousel Example")
             .clickListener { _ ->
                 listener.onCarouselClicked()
@@ -29,12 +21,10 @@ class MainNavItemController(val listener: MainFragment.NavigationOnClickListener
 
         MainNavigationModel_()
             .id(0)
-            .title("Nested EpoxyRecyclerView")
-            .addTo(this)
-
-        MainNavigationModel_()
-            .id(0)
-            .title("Spans")
+            .title("Sticky Tab Layout with Multiple Controllers")
+            .clickListener { _ ->
+                listener.onStickyTabLayoutClicked()
+            }
             .addTo(this)
     }
 

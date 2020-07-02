@@ -1,4 +1,4 @@
-package com.josephwong.maestrofication.ui.epoxyexamples
+package com.josephwong.maestrofication.ui.epoxyexamples.carousel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -7,7 +7,7 @@ import com.airbnb.epoxy.CarouselModel_
 import com.airbnb.epoxy.EpoxyController
 import com.josephwong.maestrofication.models.FlyerModel
 import com.josephwong.maestrofication.services.FavouritesManager
-import com.josephwong.maestrofication.ui.maestro.models.BestDealFlyerModel_
+import com.josephwong.maestrofication.models.FavouriteDataWrapper
 import com.josephwong.maestrofication.ui.maestro.models.PremiumFlyerModel_
 
 
@@ -39,8 +39,17 @@ class CarouselController(private val favouritesManager: FavouritesManager) : Epo
                     Log.e("JOEJOE", "click!")
                 }
                 .favouriteClickListener { _ ->
-                    favouritesManager.addFavourite(FavouriteDataWrapper(flyer.id, true))
-                    clickFavouriteFlyerLiveData.value = FavouriteDataWrapper(flyer.id, true)
+                    favouritesManager.addFavourite(
+                        FavouriteDataWrapper(
+                            flyer.id,
+                            true
+                        )
+                    )
+                    clickFavouriteFlyerLiveData.value =
+                        FavouriteDataWrapper(
+                            flyer.id,
+                            true
+                        )
                 }
                 .flyerTitle(flyer.flyerTitle)
                 .flyerThumbnailUrl(flyer.thumbnailUrl)
@@ -77,8 +86,17 @@ class CarouselController(private val favouritesManager: FavouritesManager) : Epo
                         Log.e("JOEJOE", "click!")
                     }
                     .favouriteClickListener { _ ->
-                        favouritesManager.addFavourite(FavouriteDataWrapper(flyer.id, true))
-                        clickFavouriteFlyerLiveData.value = FavouriteDataWrapper(flyer.id, true)
+                        favouritesManager.addFavourite(
+                            FavouriteDataWrapper(
+                                flyer.id,
+                                true
+                            )
+                        )
+                        clickFavouriteFlyerLiveData.value =
+                            FavouriteDataWrapper(
+                                flyer.id,
+                                true
+                            )
                     }
                     .isFavourited(isFavourited)
             )

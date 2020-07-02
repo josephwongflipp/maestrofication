@@ -1,6 +1,7 @@
 package com.josephwong.maestrofication.models
 
 import java.util.*
+import kotlin.collections.ArrayList
 
 data class FlyerModel(
     val id: String,
@@ -63,6 +64,14 @@ data class FlyerModel(
                 thumbnailUrl.random(),
                 categories.random()
             )
+        }
+
+        fun createListOfRandomFlyers(size: Int): ArrayList<FlyerModel> {
+            val result = ArrayList<FlyerModel>()
+            for (i in 0 .. size) {
+                result.add(createRandomFlyer("$i-flyer-id"))
+            }
+            return result
         }
     }
 }

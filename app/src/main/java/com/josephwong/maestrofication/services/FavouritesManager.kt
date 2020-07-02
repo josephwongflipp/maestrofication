@@ -3,7 +3,7 @@ package com.josephwong.maestrofication.services
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.josephwong.maestrofication.models.FlyerModel
-import com.josephwong.maestrofication.ui.epoxyexamples.FavouriteDataWrapper
+import com.josephwong.maestrofication.models.FavouriteDataWrapper
 import javax.inject.Inject
 import javax.inject.Singleton
 

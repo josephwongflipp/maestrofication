@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.airbnb.epoxy.EpoxyRecyclerView
 import com.josephwong.maestrofication.R
-import com.josephwong.maestrofication.ui.epoxyexamples.CarouselExampleActivity
-import com.josephwong.maestrofication.ui.epoxyexamples.SimpleExampleActivity
+import com.josephwong.maestrofication.ui.epoxyexamples.carousel.CarouselExampleActivity
+import com.josephwong.maestrofication.ui.epoxyexamples.simple.SimpleExampleActivity
+import com.josephwong.maestrofication.ui.epoxyexamples.sticky.StickyTablayoutActivity
 
 class MainFragment : Fragment() {
 
@@ -45,6 +46,11 @@ class MainFragment : Fragment() {
                 val intent: Intent = Intent(activity, CarouselExampleActivity::class.java)
                 startActivity(intent)
             }
+
+            override fun onStickyTabLayoutClicked() {
+                val intent: Intent = Intent(activity, StickyTablayoutActivity::class.java)
+                startActivity(intent)
+            }
         }))
     }
 
@@ -52,5 +58,6 @@ class MainFragment : Fragment() {
     interface NavigationOnClickListener {
         fun onSimpleExampleClicked()
         fun onCarouselClicked()
+        fun onStickyTabLayoutClicked()
     }
 }

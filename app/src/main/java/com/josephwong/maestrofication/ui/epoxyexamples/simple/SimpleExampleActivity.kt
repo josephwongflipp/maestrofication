@@ -1,17 +1,16 @@
-package com.josephwong.maestrofication.ui.epoxyexamples
+package com.josephwong.maestrofication.ui.epoxyexamples.simple
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.airbnb.epoxy.EpoxyRecyclerView
 import com.josephwong.maestrofication.R
 import com.josephwong.maestrofication.repositories.MaestroRepository
-import com.josephwong.maestrofication.utils.DensityUtil
-import com.josephwong.maestrofication.utils.PaddingDecoration
 
 class SimpleExampleActivity : AppCompatActivity() {
 
     private lateinit var epoxyRecyclerView: EpoxyRecyclerView
-    private var simpleController: SimpleController = SimpleController()
+    private var simpleController: SimpleController =
+        SimpleController()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -5,16 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.airbnb.epoxy.EpoxyRecyclerView
 import com.josephwong.maestrofication.R
+import com.josephwong.maestrofication.repositories.MaestroRepository
 
 class MaestroFragment : Fragment() {
 
+    private lateinit var recyclerView: EpoxyRecyclerView
+    private var maestroController: MaestroController? = null
+
     companion object {
         fun newInstance(): MaestroFragment {
-            val args: Bundle = Bundle()
-            val fragment = MaestroFragment()
-            fragment.arguments = args
-            return fragment
+            return MaestroFragment()
         }
     }
 
@@ -28,5 +30,13 @@ class MaestroFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        recyclerView = view.findViewById(R.id.epoxyRecyclerView)
+
+        maestroController = MaestroController()
+        maestroController!!.setMaestroResponse(MaestroRepository().fetchAlphabeticalFlyers())
+
+        recyclerView.setController(maestroController!!)
+
     }
+
 }

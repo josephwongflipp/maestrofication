@@ -1,4 +1,4 @@
-package com.josephwong.maestrofication.ui.epoxyexamples
+package com.josephwong.maestrofication.ui.epoxyexamples.simple
 
 import android.util.Log
 import com.airbnb.epoxy.EpoxyController

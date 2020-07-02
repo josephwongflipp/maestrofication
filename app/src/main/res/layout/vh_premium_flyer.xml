@@ -66,6 +66,7 @@
             <!-- BODY -->
             <com.josephwong.maestrofication.ui.common.AspectRatioImageView
                 android:id="@+id/thumbnail"
+                app:ari_ratio="0.77"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>

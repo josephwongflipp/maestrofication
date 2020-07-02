@@ -1,4 +1,4 @@
-package com.josephwong.maestrofication.ui.epoxyexamples
+package com.josephwong.maestrofication.ui.epoxyexamples.carousel
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -25,7 +25,10 @@ class CarouselExampleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_list)
 
-        carouselController = CarouselController(favouritesManager)
+        carouselController =
+            CarouselController(
+                favouritesManager
+            )
 
         // Observe changes to favourite flyers, update the adapter
         favouritesManager.readFlyerLiveData.observe(this, Observer { cache ->
