@@ -9,8 +9,8 @@ class MaestroRepository {
         flyerCache.clear()
         val response = ArrayList<FlyerModel>()
         for (i in 0 .. 10) {
-            FlyerModel.createRandomFlyer().let {model ->
-                flyerCache.put(model.id, model)
+            FlyerModel.createRandomFlyer("$i").let {model ->
+                flyerCache[model.id] = model
                 response.add(model)
             }
         }

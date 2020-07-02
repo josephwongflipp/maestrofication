@@ -1,7 +1,6 @@
 package com.josephwong.maestrofication.ui.epoxyexamples
 
 import android.util.Log
-import android.view.View
 import com.airbnb.epoxy.EpoxyController
 import com.josephwong.maestrofication.models.FlyerModel
 import com.josephwong.maestrofication.ui.maestro.models.PremiumFlyerModel_
@@ -19,13 +18,11 @@ class SimpleController : EpoxyController() {
         flyers?.forEach { flyer ->
             PremiumFlyerModel_()
                 .id(flyer.id)
-                .clickListener { _ ->
+                .containerClickListener() { _ ->
                     Log.e("JOEJOE", "click!")
                 }
-                .headerTitle(flyer.flyerTitle)
-                .headerSubtitle(flyer.flyerSubtitle)
-                .thumbnailUrl(flyer.thumbnailUrl)
-                .footerTitle(flyer.merchantName)
+                .flyerTitle(flyer.flyerTitle)
+                .flyerThumbnailUrl(flyer.thumbnailUrl)
                 .addTo(this)
         }
     }

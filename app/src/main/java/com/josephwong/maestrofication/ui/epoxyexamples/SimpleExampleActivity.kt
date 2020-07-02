@@ -19,7 +19,6 @@ class SimpleExampleActivity : AppCompatActivity() {
         setContentView(R.layout.activity_single_list)
 
         epoxyRecyclerView = findViewById(R.id.epoxyRecyclerView)
-        epoxyRecyclerView.setItemSpacingDp(8)
 
         simpleController.let { controller ->
             controller.setPremiumFlyers(MaestroRepository().fetchFlyers())

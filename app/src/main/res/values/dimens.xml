@@ -1,3 +1,7 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="design_system_tag_rounded_corner">4dp</dimen>
+    <dimen name="design_system_tag_horizontal_padding">4dp</dimen>
+    <dimen name="design_system_tag_vertical_padding">4dp</dimen>
 </resources>

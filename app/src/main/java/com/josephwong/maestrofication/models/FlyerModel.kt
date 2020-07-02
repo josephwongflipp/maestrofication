@@ -14,7 +14,7 @@ data class FlyerModel(
         /**
          * Generates a random flyer for test purposes
          */
-        fun createRandomFlyer(): FlyerModel {
+        fun createRandomFlyer(id: String?): FlyerModel {
             val merchantNames = listOf(
                 "Loblaws",
                 "Fortinos",
@@ -56,7 +56,7 @@ data class FlyerModel(
             )
 
             return FlyerModel(
-                UUID.randomUUID().toString(),
+                id?: UUID.randomUUID().toString(),
                 merchantNames.random(),
                 flyerTitles.random(),
                 flyerSubtitles.random(),

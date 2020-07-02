@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2020 Wishabi. All rights reserved. -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/success1" />
+    <corners android:radius="@dimen/design_system_tag_rounded_corner" />
+    <padding
+        android:bottom="@dimen/design_system_tag_vertical_padding"
+        android:left="@dimen/design_system_tag_horizontal_padding"
+        android:right="@dimen/design_system_tag_horizontal_padding"
+        android:top="@dimen/design_system_tag_vertical_padding" />
+</shape>

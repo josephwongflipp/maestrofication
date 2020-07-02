@@ -17,4 +17,69 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="Flipp.Typography.Title" parent="android:TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/default5</item>
+    </style>
+
+    <style name="Flipp.Typography.TitleSubdued" parent="android:TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/default5</item>
+    </style>
+
+    <style name="Flipp.Typography.Header" parent="android:TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/default5</item>
+    </style>
+
+    <style name="Flipp.Typography.SubHeader" parent="android:TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/default4</item>
+    </style>
+
+    <style name="Flipp.Typography.Body" parent="android:TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/default5</item>
+    </style>
+
+    <style name="Flipp.Typography.BodySmall" parent="android:TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/default5</item>
+    </style>
+
+    <style name="Flipp.Typography.BodyStrong" parent="android:TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/default5</item>
+    </style>
+
+    <style name="Flipp.Typography.Price" parent="android:TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/default5</item>
+    </style>
+
+    <style name="Flipp.Typography.CallOut" parent="android:TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/default5</item>
+    </style>
+
+    <style name="Flipp.Typography.FinePrint" parent="android:TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/default4</item>
+    </style>
+
+    <style name="Flipp.Typography.FinePrintStrong" parent="android:TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/default5</item>
+    </style>
+
 </resources>
