@@ -1,6 +1,7 @@
 package com.josephwong.maestrofication.ui.common
 
 import android.content.Context
+import android.graphics.Canvas
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
 import com.josephwong.maestrofication.R
@@ -34,6 +35,21 @@ class AspectRatioImageView @JvmOverloads constructor(
         }
 
         setMeasuredDimension(width, height)
+    }
+
+    override fun onDraw(canvas: Canvas) {
+        val drawable = drawable ?: return
+        val fillScale: Float =
+            getScaleToFillRatio(drawable.intrinsicWidth, drawable.intrinsicHeight)
+        canvas.scale(fillScale, fillScale)
+        drawable.draw(canvas)
+    }
+
+
+    protected fun getScaleToFillRatio(boxWidth: Int, boxHeight: Int): Float {
+        val widthRatio = width / boxWidth.toFloat()
+        val heightRatio = height / boxHeight.toFloat()
+        return if (widthRatio > heightRatio) widthRatio else heightRatio
     }
 
     companion object {

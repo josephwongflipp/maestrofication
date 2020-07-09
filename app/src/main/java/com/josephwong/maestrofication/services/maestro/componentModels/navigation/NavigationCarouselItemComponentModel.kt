@@ -1,0 +1,6 @@
+package com.josephwong.maestrofication.services.maestro.componentModels.navigation
+
+import com.josephwong.maestrofication.services.maestro.componentModels.IComponentModel
+import maestro.components.NavigationCarouselItem
+
+class NavigationCarouselItemComponentModel(val navigationCarouselItem: NavigationCarouselItem) : IComponentModel

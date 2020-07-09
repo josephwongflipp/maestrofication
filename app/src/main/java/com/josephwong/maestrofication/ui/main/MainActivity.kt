@@ -4,14 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
 import com.josephwong.maestrofication.R
-import com.josephwong.maestrofication.repositories.MaestroRepository
 
 
 class MainActivity : AppCompatActivity() {
-
-    // TODO: use dependancy injection here
-    private val repository: MaestroRepository = MaestroRepository()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

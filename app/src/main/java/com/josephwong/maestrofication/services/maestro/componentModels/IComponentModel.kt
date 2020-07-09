@@ -1,0 +1,3 @@
+package com.josephwong.maestrofication.services.maestro.componentModels
+
+interface IComponentModel

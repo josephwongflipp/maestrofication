@@ -7,8 +7,6 @@ import com.josephwong.maestrofication.models.FavouriteDataWrapper
 import javax.inject.Inject
 import javax.inject.Singleton
 
-// TODO: We should probably communicate with a Repository
-
 @Singleton
 class FavouritesManager @Inject constructor() {
     private val _readFlyersLiveData: MutableLiveData<HashMap<String, FlyerModel?>> = MutableLiveData()
